@@ -78,7 +78,10 @@ public SecurityConfig(
         .authorizeHttpRequests(auth -> auth
                 .requestMatchers(
                         "/api/auth/**",
-                        "/api/health"
+                        "/api/health",
+                        "/api/paypal/test-invoices",
+                        "/api/paypal/test-invoice/**",
+                        "/error"    
                 ).permitAll()
                 .anyRequest().authenticated()
         );

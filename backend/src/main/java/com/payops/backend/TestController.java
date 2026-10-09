@@ -10,4 +10,8 @@ public class TestController {
     public String protectedEndpoint() {
         return "Authenticated";
     }
+    @GetMapping("/api/health")
+    public String healthCheck() {
+        return "Healthy";
+    }
 }
